@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 3.0 (December 17, 2022)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@latextemplates.com)
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	%a4paper, % Uncomment for A4 paper size (default is US letter)
+	11pt, % Default font size, can use 10pt, 11pt or 12pt
+]{resume} % Use the resume class
+
+\usepackage{inter}
+
+%------------------------------------------------
+
+\name{Keanu Kerr} % Your name to appear at the top
+
+% You can use the \address command up to 3 times for 3 different addresses or pieces of contact information
+% Any new lines (\\) you use in the \address commands will be converted to symbols, so each address will appear as a single line.
+
+\address{keanukerr.com}
+
+\address{github.com/keanuk \\ linkedin.com/in/keanukerr}
+
+\address{+1~$\cdot$~321~$\cdot$~442~$\cdot$~0942 \\ keanukerr@gmail.com}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+	
+	\textbf{University of Edinburgh} \hfill \textit{November 2019} \\
+	MSc in Informatics \\
+	\textbf{University of Florida} \hfill \textit{May 2018} \\ 
+	BSc in Computer Science \\
+	Minor in Studio Art
+	
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Technical Strengths}
+
+	\begin{tabular}{@{} >{\bfseries}l @{\hspace{6ex}} l @{}}
+		Programming Languages & Java, Python, TypeScript, JavaScript, Rust, Go, C++, C, Bash \\
+		Frameworks \& APIs & Spring, Node, Angular, Elasticsearch, PyTorch \\
+		Technologies & Linux, Git, REST, GraphQL, Docker, k8s \\
+	\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Experience}
+
+	\begin{rSubsection}{General Motors}{February 2020 - Present}{Software Engineer}{Austin, Texas}
+		\item Created REST APIs using Spring Framework and JAX-RS
+		\item Integrated with SQL database backend
+		\item Deployed to PCF and Kubernetes platforms
+		\item Employed TDD and CI/CD practices
+	\end{rSubsection}
+
+%------------------------------------------------
+
+	\begin{rSubsection}{Elgato}{May - August 2016}{Software Engineer Intern}{Munich, Germany}
+		\item Created overlays for Game Capture software
+		\item Worked on internal downloads monitoring web page
+		\item Collaborated in teams of developers using GitHub to build overlays
+		\item Programmed extensively in JavaScript, HTML, CSS, and Ruby
+	\end{rSubsection}
+
+%------------------------------------------------
+
+	\begin{rSubsection}{Rapid Genomics}{January - April 2016}{Software Engineer Student}{Gainesville, Florida}
+		\item Maintained communication between dev team and client and developed code designs
+		\item Adhered to Agile principles throughout the development process
+		\item Implemented MEAN stack to develop a consumer facing site to track genome sequencing
+	\end{rSubsection}
+
+\end{rSection}
+
+\begin{rSection}{Student Projects}
+
+	\begin{rSubsection}{University of Edinburgh}{April - August 2019}{Master's Dissertation Project}{Edinburgh, Soctland}
+		\item Implemented role-playing game in Java
+		\item Designed with intent of being used as a learning tool for students
+		\item Used MVC pattern and applied other design patterns and OOP principles
+		\item Implemented network-based multiplayer functionality
+	\end{rSubsection}
+
+%------------------------------------------------
+
+	\begin{rSubsection}{University of Florida}{January - May 2018}{Senior Project}{Gainesville, Florida}
+		\item Built front end Angular web application allowing users to create custom characters
+		\item Worked in a group to create custom GoLang server to store data
+		\item Self-hosted website on a home server
+	\end{rSubsection}
+
+\end{rSection}
+
+\end{document}
