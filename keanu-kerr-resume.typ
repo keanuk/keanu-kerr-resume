@@ -33,8 +33,7 @@
 }
 
 #let section(title, body) = {
-  v(0.1em)
-
+  v(0.5em)
   // Section title with inline divider
   grid(
     columns: (auto, 1fr),
@@ -43,8 +42,7 @@
     text(weight: "bold")[#upper(title)],
     line(length: 100%, stroke: 0.5pt)
   )
-  v(0.05em)
-
+  v(-0.5em)
   // Section content with left margin
   pad(left: 1.0em)[#body]
 }
@@ -56,13 +54,14 @@
   location: "",
   items: ()
 ) = {
+  v(0.25em)
   // Company name and dates
   grid(
     columns: (1fr, auto),
     text(weight: "bold")[#company],
     text()[#dates]
   )
-
+  v(-0.25em)
   // Position and location (if provided)
   if position != "" or location != "" [
     #grid(
@@ -71,16 +70,13 @@
       text(style: "italic")[#location]
     )
   ]
-
-  v(0.02em)
-
+  v(-0.25em)
   // Bullet points
   for item in items [
     • #item
-    #v(-0.02em)
+    #v(-0.75em)
   ]
-
-  v(0.02em)
+  v(0.25em)
 }
 
 #let skills-table(skills) = {
@@ -107,9 +103,9 @@
 
 #section("Skills")[
   #skills-table((
-    "Programming Languages": "Go, Java, Python, TypeScript, JavaScript, Rust, C++, C, Bash",
-    "Frameworks & APIs": "Spring, JAX-RS, Node, Angular, Elasticsearch, PyTorch",
-    "Technologies & Services": "Linux, Git, REST, GraphQL, SQL, Docker, k8s, AWS, Azure"
+    "Programming Languages": "Go, Java, Rust, Python, TypeScript, JavaScript, C++, C, Bash",
+    "Frameworks & Libraries": "Protobuf, Spring, JAX-RS, Node, Angular, Elasticsearch",
+    "Technologies & Services": "Linux, Git, REST, gRPC, PostreSQL, Docker, k8s, AWS, Azure"
   ))
 ]
 
@@ -120,9 +116,9 @@
     position: "Software Engineer",
     location: "Philadelphia, Pennsylvania",
     items: (
-      "Developed REST and RPC APIs using Go and integrated them with Postgres databases",
-      "Led small team to create new API and migrated functionality from older project",
-      "Deployed APIs as Docker images on Kubernetes platform"
+      "Developed REST and gRPC APIs in Go, integrating with PostgreSQL databases for financial services",
+      "Implemented features for loan processing, payment systems, and credit bureau reporting workflows",
+      "Containerized and deployed microservices using Docker on Kubernetes infrastructure"
     )
   )
 
@@ -132,9 +128,9 @@
     position: "Software Engineer",
     location: "Austin, Texas",
     items: (
-      "Created REST APIs using Spring Framework and JAX-RS integrating with Oracle SQL databases",
-      "Increased performance of search APIs by deploying and integrating Elasticsearch cluster",
-      "Employed TDD and CI/CD practices using Docker and Kubernetes clusters hosted on Azure"
+      "Developed REST APIs using Spring Framework and JAX-RS with Oracle database integration",
+      "Improved search API performance with Elasticsearch cluster implementation and optimization",
+      "Implemented TDD methodology and CI/CD pipelines using Docker on Azure Kubernetes Service"
     )
   )
 
@@ -144,9 +140,9 @@
     position: "Software Engineer Intern",
     location: "Munich, Germany",
     items: (
-      "Created test overlays for Game Capture software written in JavaScript",
-      "Worked on internal metrics monitoring page written in Angular",
-      "Used Git to collaborate with other teams of developers on internal web applications"
+      "Developed JavaScript test overlays for Game Capture software to improve QA testing efficiency",
+      "Built internal metrics dashboard using Angular for real-time application monitoring",
+      "Collaborated across development teams using Git workflows for internal web application development"
     )
   )
 ]
@@ -158,9 +154,9 @@
     position: "Master's Dissertation Project",
     location: "Edinburgh, Scotland",
     items: (
-      "Created multiplayer role-playing game in Java with JavaFX and peer-to-peer networking",
-      "Designed using OO design patterns with intent of being used as a learning tool for students",
-      "Created documentation for setup and possible ways to extend functionality"
+      "Developed multiplayer RPG in Java using JavaFX GUI and peer-to-peer networking architecture",
+      "Implemented OO design patterns to create an educational framework for computer science students",
+      "Authored comprehensive documentation including setup guides and extensibility framework"
     )
   )
 
@@ -170,9 +166,9 @@
     position: "Senior Project",
     location: "Gainesville, Florida",
     items: (
-      "Built front end Angular web application allowing users to create custom game characters",
-      "Integrated with back-end service written in Go to store user profiles and character data",
-      "Self-hosted website and related components on home server"
+      "Developed Angular web application for custom game character creation with dynamic form validation",
+      "Built Go backend service with REST API for user profile management and character data persistence",
+      "Deployed full-stack application on self-managed Linux server infrastructure"
     )
   )
 ]
@@ -192,6 +188,5 @@
     text(weight: "bold")[University of Florida],
     text(style: "italic")[May 2018]
   )
-  BSc in Computer Science \
-  Minor in Studio Art
+  BSc in Computer Science & Minor in Studio Art
 ]
